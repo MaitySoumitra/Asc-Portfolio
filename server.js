@@ -16,7 +16,7 @@ app.use('/api/ui', uiRoutes);
 app.use('/api/auth', authRoutes);
 
 mongoose
-  .connect(process.env.MONGO_URI || 'mongodb://localhost:27017/portfolio')
+  .connect(process.env.MONGO_URI )
   .then(() => {
     console.log('✅ MongoDB connected');
 
