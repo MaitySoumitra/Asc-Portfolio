@@ -1,0 +1,11 @@
+// routes/uiRoutes.js
+const express = require('express');
+const { getAllUiItems, addUiItem } = require('../controllers/uiController');
+const { protect } = require('../middleware/authMiddleware');
+
+const router = express.Router();
+
+router.get('/', getAllUiItems);
+router.post('/', protect, addUiItem); // ✅ Protected
+
+module.exports = router;
