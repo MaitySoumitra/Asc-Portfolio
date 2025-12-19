@@ -9,7 +9,7 @@ const authRoutes = require('./routes/authRoutes');
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
 app.use(cors({
     origin: process.env.SERVER_CORS,  
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
